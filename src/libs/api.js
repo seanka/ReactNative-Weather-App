@@ -1,5 +1,6 @@
-const API_KEY = '';
-// a33cd9ae08415cccce08f8912a43935e
+import authKey from './authKey';
+
+const {API_KEY} = authKey;
 const RAW_URL = 'https://api.openweathermap.org/data/3.0/onecall?';
 
 export async function getWeather({lat, lon}) {

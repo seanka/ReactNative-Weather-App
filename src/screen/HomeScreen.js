@@ -5,7 +5,7 @@ import {getWeather} from '../libs/api';
 
 function HomeScreen() {
   useEffect(() => {
-    getWeather();
+    getWeather({lat: -6.9147, lon: 107.6098});
   }, []);
 
   return (
