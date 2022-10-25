@@ -1,3 +1,638 @@
+export const GoogleDummyData = {
+  plus_code: {
+    compound_code: '3JJ9+XJX Kebon Pisang, Bandung City, West Java, Indonesia',
+    global_code: '6P593JJ9+XJX',
+  },
+  results: [
+    {
+      address_components: [
+        {
+          long_name: '3JJ9+XMR',
+          short_name: '3JJ9+XMR',
+          types: ['plus_code'],
+        },
+        {
+          long_name: 'Kebon Pisang',
+          short_name: 'Kebon Pisang',
+          types: ['administrative_area_level_4', 'political'],
+        },
+        {
+          long_name: 'Sumurbandung',
+          short_name: 'Sumurbandung',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+        {
+          long_name: '40112',
+          short_name: '40112',
+          types: ['postal_code'],
+        },
+      ],
+      formatted_address:
+        '3JJ9+XMR, Kebon Pisang, Sumurbandung, Bandung City, West Java 40112, Indonesia',
+      geometry: {
+        location: {
+          lat: -6.917505999999999,
+          lng: 107.6191273,
+        },
+        location_type: 'GEOMETRIC_CENTER',
+        viewport: {
+          northeast: {
+            lat: -6.916157019708497,
+            lng: 107.6204762802915,
+          },
+          southwest: {
+            lat: -6.918854980291502,
+            lng: 107.6177783197085,
+          },
+        },
+      },
+      place_id: 'ChIJbwoABXfnaC4RTbJ4ZLrtblc',
+      types: ['establishment', 'point_of_interest'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'no 39 B',
+          short_name: 'no 39 B',
+          types: ['street_number'],
+        },
+        {
+          long_name: 'Jl. Taman Saturnus II',
+          short_name: 'Jl. Taman Saturnus II',
+          types: ['route'],
+        },
+        {
+          long_name: 'Margahayu Raya',
+          short_name: 'Margahayu Raya',
+          types: ['administrative_area_level_4', 'political'],
+        },
+        {
+          long_name: 'Kecamatan Sumur Bandung',
+          short_name: 'Kec. Sumur Bandung',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Kota Bandung',
+          short_name: 'Kota Bandung',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'Jawa Barat',
+          short_name: 'Jawa Barat',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address:
+        'Jl. Taman Saturnus II No.39 B, Margahayu Raya, Kec. Sumur Bandung, Kota Bandung, Jawa Barat, Indonesia',
+      geometry: {
+        location: {
+          lat: -6.9174639,
+          lng: 107.6191228,
+        },
+        location_type: 'ROOFTOP',
+        viewport: {
+          northeast: {
+            lat: -6.916114919708497,
+            lng: 107.6204717802915,
+          },
+          southwest: {
+            lat: -6.918812880291502,
+            lng: 107.6177738197085,
+          },
+        },
+      },
+      place_id: 'ChIJgbJ9IcznaC4R1FvpwuwZHVs',
+      plus_code: {
+        compound_code:
+          '3JM9+2J Kebon Pisang, Bandung City, West Java, Indonesia',
+        global_code: '6P593JM9+2J',
+      },
+      types: ['street_address'],
+    },
+    {
+      address_components: [
+        {
+          long_name: '3JJ9+XMR',
+          short_name: '3JJ9+XMR',
+          types: ['plus_code'],
+        },
+        {
+          long_name: 'Kebon Pisang',
+          short_name: 'Kebon Pisang',
+          types: ['administrative_area_level_4', 'political'],
+        },
+        {
+          long_name: 'GURAH MATA',
+          short_name: 'GURAH MATA',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+        {
+          long_name: '40112',
+          short_name: '40112',
+          types: ['postal_code'],
+        },
+      ],
+      formatted_address:
+        '3JJ9+XMR, Kebon Pisang, GURAH MATA, Bandung City, West Java 40112, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.917499599999999,
+            lng: 107.619194,
+          },
+          southwest: {
+            lat: -6.9176024,
+            lng: 107.6191004,
+          },
+        },
+        location: {
+          lat: -6.9175428,
+          lng: 107.6191507,
+        },
+        location_type: 'ROOFTOP',
+        viewport: {
+          northeast: {
+            lat: -6.916202019708498,
+            lng: 107.6204961802915,
+          },
+          southwest: {
+            lat: -6.918899980291503,
+            lng: 107.6177982197085,
+          },
+        },
+      },
+      place_id: 'ChIJV3CBgjLmaC4RV8mk6J8lMsg',
+      types: ['premise'],
+    },
+    {
+      address_components: [
+        {
+          long_name: '3JJ9+XJ',
+          short_name: '3JJ9+XJ',
+          types: ['plus_code'],
+        },
+        {
+          long_name: 'Kebon Pisang',
+          short_name: 'Kebon Pisang',
+          types: ['administrative_area_level_4', 'political'],
+        },
+        {
+          long_name: 'Sumurbandung',
+          short_name: 'Sumurbandung',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address:
+        '3JJ9+XJ Kebon Pisang, Bandung City, West Java, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.9175,
+            lng: 107.619125,
+          },
+          southwest: {
+            lat: -6.917624999999999,
+            lng: 107.619,
+          },
+        },
+        location: {
+          lat: -6.9175,
+          lng: 107.6191,
+        },
+        location_type: 'GEOMETRIC_CENTER',
+        viewport: {
+          northeast: {
+            lat: -6.916213519708498,
+            lng: 107.6204114802915,
+          },
+          southwest: {
+            lat: -6.918911480291502,
+            lng: 107.6177135197085,
+          },
+        },
+      },
+      place_id: 'GhIJ61G4HoWrG8ARBz2bVZ_nWkA',
+      plus_code: {
+        compound_code:
+          '3JJ9+XJ Kebon Pisang, Bandung City, West Java, Indonesia',
+        global_code: '6P593JJ9+XJ',
+      },
+      types: ['plus_code'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'Kebon Pisang',
+          short_name: 'Kebon Pisang',
+          types: ['administrative_area_level_4', 'political'],
+        },
+        {
+          long_name: 'Sumurbandung',
+          short_name: 'Sumurbandung',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address:
+        'Kebon Pisang, Sumurbandung, Bandung City, West Java, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.915789999999999,
+            lng: 107.6249051,
+          },
+          southwest: {
+            lat: -6.922365999999999,
+            lng: 107.6120549,
+          },
+        },
+        location: {
+          lat: -6.9189281,
+          lng: 107.617093,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: -6.915789999999999,
+            lng: 107.6249051,
+          },
+          southwest: {
+            lat: -6.922365999999999,
+            lng: 107.6120549,
+          },
+        },
+      },
+      place_id: 'ChIJRVPtoC3maC4RZRhJ5kB9Ggc',
+      types: ['administrative_area_level_4', 'political'],
+    },
+    {
+      address_components: [
+        {
+          long_name: '40112',
+          short_name: '40112',
+          types: ['postal_code'],
+        },
+        {
+          long_name: 'Sumurbandung',
+          short_name: 'Sumurbandung',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address:
+        'Sumurbandung, Bandung City, West Java 40112, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.915712699999999,
+            lng: 107.6250991,
+          },
+          southwest: {
+            lat: -6.922330199999999,
+            lng: 107.6122359,
+          },
+        },
+        location: {
+          lat: -6.9189281,
+          lng: 107.617093,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: -6.915712699999999,
+            lng: 107.6250991,
+          },
+          southwest: {
+            lat: -6.922330199999999,
+            lng: 107.6122359,
+          },
+        },
+      },
+      place_id: 'ChIJ4ajSR9LnaC4RELaOVuvFABw',
+      types: ['postal_code'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'Sumurbandung',
+          short_name: 'Sumurbandung',
+          types: ['administrative_area_level_3', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address: 'Sumurbandung, Bandung City, West Java, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.906476,
+            lng: 107.6300809,
+          },
+          southwest: {
+            lat: -6.922365999999999,
+            lng: 107.604045,
+          },
+        },
+        location: {
+          lat: -6.916083299999999,
+          lng: 107.6089776,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: -6.906476,
+            lng: 107.6300809,
+          },
+          southwest: {
+            lat: -6.922365999999999,
+            lng: 107.604045,
+          },
+        },
+      },
+      place_id: 'ChIJ65P9xzPmaC4RDzu_ji5F4_M',
+      types: ['administrative_area_level_3', 'political'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'Bandung',
+          short_name: 'Bandung',
+          types: ['locality', 'political'],
+        },
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address: 'Bandung, Bandung City, West Java, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.839277999999999,
+            lng: 107.7387141,
+          },
+          southwest: {
+            lat: -6.9676209,
+            lng: 107.547601,
+          },
+        },
+        location: {
+          lat: -6.9174639,
+          lng: 107.6191228,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: -6.839277999999999,
+            lng: 107.7387141,
+          },
+          southwest: {
+            lat: -6.9676209,
+            lng: 107.547601,
+          },
+        },
+      },
+      place_id: 'ChIJf0dSgjnmaC4RshXo05MfahQ',
+      types: ['locality', 'political'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'Bandung City',
+          short_name: 'Bandung City',
+          types: ['administrative_area_level_2', 'political'],
+        },
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address: 'Bandung City, West Java, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -6.8368851,
+            lng: 107.739341,
+          },
+          southwest: {
+            lat: -6.969735099999999,
+            lng: 107.545901,
+          },
+        },
+        location: {
+          lat: -6.9170227,
+          lng: 107.63337,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: -6.8368851,
+            lng: 107.739341,
+          },
+          southwest: {
+            lat: -6.969735099999999,
+            lng: 107.545901,
+          },
+        },
+      },
+      place_id: 'ChIJAdfUUL7naC4Rf9PH76Jp6lI',
+      types: ['administrative_area_level_2', 'political'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'West Java',
+          short_name: 'West Java',
+          types: ['administrative_area_level_1', 'political'],
+        },
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address: 'West Java, Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: -5.9147008,
+            lng: 108.839768,
+          },
+          southwest: {
+            lat: -7.820987000000001,
+            lng: 106.370506,
+          },
+        },
+        location: {
+          lat: -7.090910999999999,
+          lng: 107.668887,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: -5.9147008,
+            lng: 108.839768,
+          },
+          southwest: {
+            lat: -7.820987000000001,
+            lng: 106.370506,
+          },
+        },
+      },
+      place_id: 'ChIJf0dSgjnmaC4Rfp2O_FSkGLw',
+      types: ['administrative_area_level_1', 'political'],
+    },
+    {
+      address_components: [
+        {
+          long_name: 'Indonesia',
+          short_name: 'ID',
+          types: ['country', 'political'],
+        },
+      ],
+      formatted_address: 'Indonesia',
+      geometry: {
+        bounds: {
+          northeast: {
+            lat: 6.216999899999999,
+            lng: 141.0425,
+          },
+          southwest: {
+            lat: -11.1082999,
+            lng: 94.7351,
+          },
+        },
+        location: {
+          lat: -0.7892749999999999,
+          lng: 113.921327,
+        },
+        location_type: 'APPROXIMATE',
+        viewport: {
+          northeast: {
+            lat: 6.216999899999999,
+            lng: 141.0425,
+          },
+          southwest: {
+            lat: -11.1082999,
+            lng: 94.7351,
+          },
+        },
+      },
+      place_id: 'ChIJtwRkSdcHTCwRhfStG-dNe-M',
+      types: ['country', 'political'],
+    },
+  ],
+  status: 'OK',
+};
+
 export const DummyData = {
   lat: -6.9175,
   lon: 107.6191,

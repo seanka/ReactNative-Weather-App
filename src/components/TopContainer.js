@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { currentWeather } from '../libs/jsonParser';
 
-function TopContainer({ weatherData, date }) {
+function TopContainer({ weatherData, date, cityData }) {
   const [currentData, currentWeatherData] = currentWeather(weatherData);
 
   return (
     <View style={styles.rootContainer}>
-      <Text style={styles.cityText}>{weatherData.lat} </Text>
+      <Text style={styles.cityText}>
+        {`${cityData.results[0].address_components[3].long_name}, ${cityData.results[0].address_components[5].long_name}`}{' '}
+      </Text>
       <Text style={styles.dateText}>Today, {date} </Text>
       <View style={styles.weatherTempContainer}>
         <View style={styles.weatherContainer}>

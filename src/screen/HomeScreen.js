@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-import { getWeather } from '../libs/api';
-import { DummyData } from '../DummyData';
+import { getCity, getWeather } from '../libs/api';
+import { DummyData, GoogleDummyData } from '../DummyData';
 import TopContainer from '../components/TopContainer';
 import BottomContainer from '../components/BottomContainer';
 
 function HomeScreen() {
   const [weatherData, setWeatherData] = useState([]);
+  const [cityData, setCityData] = useState([]);
   const [date, setDate] = useState('');
 
   let formatDate = () => {
@@ -38,20 +39,27 @@ function HomeScreen() {
     formatDate();
   }, []);
 
-  // let updateWeather = async () => {
-  //   const response = await getWeather({lat: -6.9147, lon: 107.6098});
-  //   setWeatherData(response);
+  // let fetchData = async () => {
+  //   const weatherResponse = await getWeather({ lat: -6.9147, lon: 107.6098 });
+  //   const cityResponse = await getCity({ lat: -6.9147, lon: 107.6098 });
+
+  //   setWeatherData(weatherResponse);
+  //   setCityData(cityResponse);
   // };
 
   // useEffect(() => {
-  //   updateWeather();
+  //   fetchData();
   // }, []);
 
   return (
     <View style={styles.dummyStyles}>
-      <Button title="fetch data" onPress={() => updateWeather()} />
+      <Button title="fetch data" onPress={() => fetchData()} />
       <View style={styles.componentsContainer}>
-        <TopContainer weatherData={DummyData} date={date} />
+        <TopContainer
+          weatherData={DummyData}
+          date={date}
+          cityData={GoogleDummyData}
+        />
         <BottomContainer weatherData={DummyData} />
       </View>
     </View>
