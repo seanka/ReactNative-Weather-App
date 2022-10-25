@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 import { getWeather } from '../libs/api';
 import { DummyData } from '../DummyData';
@@ -46,13 +46,25 @@ function HomeScreen() {
   // useEffect(() => {
   //   updateWeather();
   // }, []);
+
   return (
-    <View>
+    <View style={styles.dummyStyles}>
       <Button title="fetch data" onPress={() => updateWeather()} />
-      <TopContainer weatherData={DummyData} date={date} />
-      <BottomContainer weatherData={DummyData} />
+      <View style={styles.componentsContainer}>
+        <TopContainer weatherData={DummyData} date={date} />
+        <BottomContainer weatherData={DummyData} />
+      </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  dummyStyles: { flex: 1 },
+  componentsContainer: {
+    flex: 5,
+    justifyContent: 'space-between',
+    marginBottom: 20,
+  },
+});
 
 export default HomeScreen;

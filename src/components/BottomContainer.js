@@ -8,27 +8,27 @@ function BottomContainer({ weatherData }) {
   const [currentData] = currentWeather(weatherData);
 
   return (
-    <View>
+    <View style={styles.rootContainer}>
       <Text>Weather now</Text>
-      <View style={styles.rowContainer}>
-        <View>
+      <View>
+        <View style={styles.rowContainer}>
           <WeatherDataComponent
             componentData={currentData.feels_like}
             type="Feels like"
           />
           <WeatherDataComponent
-            componentData={currentData.wind_speed}
-            type="Wind"
-          />
-        </View>
-        <View>
-          <WeatherDataComponent
-            componentData={currentData.pressure}
-            type="Pressure"
-          />
-          <WeatherDataComponent
             componentData={currentData.humidity}
             type="Humidity"
+          />
+        </View>
+        <View style={styles.rowContainer}>
+          <WeatherDataComponent
+            componentData={currentData.sunrise}
+            type="Sunrise"
+          />
+          <WeatherDataComponent
+            componentData={currentData.sunset}
+            type="Sunset"
           />
         </View>
       </View>
@@ -37,6 +37,9 @@ function BottomContainer({ weatherData }) {
 }
 
 const styles = StyleSheet.create({
+  rootContainer: {
+    marginHorizontal: 20,
+  },
   rowContainer: {
     flexDirection: 'row',
   },
