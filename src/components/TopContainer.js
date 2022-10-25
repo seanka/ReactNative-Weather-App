@@ -1,19 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import React, { useEffect } from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
-function TopContainer({weatherData, date}) {
-  const [currentData, setCurrentData] = useState([]);
-  const [currentWeatherData, setCurrentWeatherData] = useState([]);
+import { currentWeather } from '../libs/jsonParser';
 
-  let parseCurrentData = () => {
-    setCurrentData(weatherData.current);
-    setCurrentWeatherData(weatherData.current.weather[0]);
-    console.log(currentWeatherData.icon);
-  };
-
-  useEffect(() => {
-    parseCurrentData();
-  }, [weatherData]);
+function TopContainer({ weatherData, date }) {
+  const [currentData, currentWeatherData] = currentWeather(weatherData);
 
   return (
     <View style={styles.rootContainer}>
@@ -38,8 +29,8 @@ function TopContainer({weatherData, date}) {
 }
 
 const styles = StyleSheet.create({
-  cityText: {fontSize: 16, fontWeight: '600'},
-  dateText: {fontSize: 12, fontWeight: '300'},
+  cityText: { fontSize: 16, fontWeight: '600' },
+  dateText: { fontSize: 12, fontWeight: '300' },
   rootContainer: {
     marginTop: 10,
     marginHorizontal: 20,

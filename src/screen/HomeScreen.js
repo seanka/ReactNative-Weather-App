@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {Button, Text, View} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Button, Text, View } from 'react-native';
 
-import {getWeather} from '../libs/api';
-import {DummyData} from '../DummyData';
+import { getWeather } from '../libs/api';
+import { DummyData } from '../DummyData';
 import TopContainer from '../components/TopContainer';
 
 function HomeScreen() {
@@ -45,7 +45,6 @@ function HomeScreen() {
   // useEffect(() => {
   //   updateWeather();
   // }, []);
-
   return (
     <View>
       <Button title="fetch data" onPress={() => updateWeather()} />
