@@ -18,7 +18,7 @@ function TopContainer({ weatherData, date }) {
               uri: `http://openweathermap.org/img/wn/${currentWeatherData.icon}.png`,
             }}
           />
-          <Text>{currentWeatherData.description.replace(/ /g, '\n')}</Text>
+          <Text>{currentWeatherData.description}</Text>
         </View>
         <View style={styles.tempContainer}>
           <Text style={styles.tempText}>{Math.floor(currentData.temp)}°</Text>
