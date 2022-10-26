@@ -17,7 +17,7 @@ function TopContainer({ weatherData, date, cityData }) {
           <Image
             style={styles.weatherIcon}
             source={{
-              uri: `http://openweathermap.org/img/wn/${currentWeatherData.icon}.png`,
+              uri: `http://openweathermap.org/img/wn/${currentWeatherData.icon}@4x.png`,
             }}
           />
           <Text style={styles.weatherText}>
@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   weatherIcon: {
-    height: 40,
-    width: 40,
+    height: 60,
+    width: 60,
   },
   weatherText: { fontFamily: 'Poppins-SemiBold', fontSize: 16 },
   tempContainer: {
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
   tempText: {
     fontFamily: 'Poppins-Medium',
     fontSize: 75,
+    paddingRight: 10,
   },
 });
 

@@ -42,9 +42,10 @@ function HomeScreen() {
 const styles = StyleSheet.create({
   dummyStyles: { flex: 1 },
   componentsContainer: {
+    backgroundColor: '#C3CEB0',
     flex: 5,
     justifyContent: 'space-between',
-    marginBottom: 20,
+    paddingTop: 10,
   },
 });
 

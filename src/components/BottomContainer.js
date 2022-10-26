@@ -38,9 +38,18 @@ function BottomContainer({ weatherData }) {
 
 const styles = StyleSheet.create({
   rootContainer: {
-    marginHorizontal: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+    backgroundColor: 'white',
+    elevation: 10,
   },
-  titleText: { fontFamily: 'Poppins-SemiBold', fontSize: 18 },
+  titleText: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 18,
+    paddingVertical: 5,
+  },
   rowContainer: {
     flexDirection: 'row',
   },
