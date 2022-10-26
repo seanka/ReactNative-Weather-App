@@ -17,6 +17,7 @@ function HomeScreen() {
   const [weatherData, setWeatherData] = useState([]);
   const [cityData, setCityData] = useState([]);
   const [date] = getDate();
+  //*set to true when fetchData function is on
   const [isLoading, setIsLoading] = useState(false);
 
   // let fetchData = async () => {

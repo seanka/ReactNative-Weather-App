@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { currentWeather } from '../libs/jsonParser';
 import ToggleButton from './bottom-container/ToggleButton';
-import WeatherDataComponent from './bottom-container/WeatherDataComponent';
+import WeatherNow from './bottom-container/WeatherNow';
 
 function BottomContainer({ weatherData }) {
-  const [currentData] = currentWeather(weatherData);
   const [buttonPressed, setButtonPressed] = useState('Now');
 
   const titleSwitch = buttonPressed => {
@@ -20,30 +18,22 @@ function BottomContainer({ weatherData }) {
     }
   };
 
+  const componentSwitch = (buttonPressed, weatherData) => {
+    switch (buttonPressed) {
+      case 'Now':
+        return <WeatherNow weatherData={weatherData} />;
+      case 'Hourly':
+        return null;
+      case 'Daily':
+        return null;
+    }
+  };
+
   return (
     <View style={styles.rootContainer}>
       <Text style={styles.titleText}>{titleSwitch(buttonPressed)}</Text>
-      <View>
-        <View style={styles.rowContainer}>
-          <WeatherDataComponent
-            componentData={currentData.feels_like}
-            type="Feels like"
-          />
-          <WeatherDataComponent
-            componentData={currentData.humidity}
-            type="Humidity"
-          />
-        </View>
-        <View style={styles.rowContainer}>
-          <WeatherDataComponent
-            componentData={currentData.sunrise}
-            type="Sunrise"
-          />
-          <WeatherDataComponent
-            componentData={currentData.sunset}
-            type="Sunset"
-          />
-        </View>
+      <View style={styles.componentContainer}>
+        {componentSwitch(buttonPressed, weatherData)}
       </View>
       <View style={styles.buttonsContainer}>
         <ToggleButton
@@ -81,10 +71,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     paddingVertical: 5,
   },
-  rowContainer: {
-    flexDirection: 'row',
+  componentContainer: {
+    flex: 4,
   },
   buttonsContainer: {
+    flex: 1,
     flexDirection: 'row',
     paddingTop: 10,
   },
