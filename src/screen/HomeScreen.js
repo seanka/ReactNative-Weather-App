@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import {
+  ActivityIndicator,
+  Button,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 import { getCity, getWeather } from '../libs/api';
 import { getDate } from '../libs/date';
@@ -11,13 +17,18 @@ function HomeScreen() {
   const [weatherData, setWeatherData] = useState([]);
   const [cityData, setCityData] = useState([]);
   const [date] = getDate();
+  const [isLoading, setIsLoading] = useState(false);
 
   // let fetchData = async () => {
+  //   setIsLoading(true);
+
   //   const weatherResponse = await getWeather({ lat: -6.9147, lon: 107.6098 });
   //   const cityResponse = await getCity({ lat: -6.9147, lon: 107.6098 });
 
   //   setWeatherData(weatherResponse);
   //   setCityData(cityResponse);
+
+  //   setIsLoading(false);
   // };
 
   // useEffect(() => {
@@ -27,13 +38,19 @@ function HomeScreen() {
   return (
     <View style={styles.dummyStyles}>
       <Button title="fetch data" onPress={() => fetchData()} />
-      <View style={styles.componentsContainer}>
-        <TopContainer
-          weatherData={DummyData}
-          date={date}
-          cityData={GoogleDummyData}
-        />
-        <BottomContainer weatherData={DummyData} />
+      <View style={styles.rootContainer}>
+        {isLoading ? (
+          <ActivityIndicator />
+        ) : (
+          <View style={styles.componentsContainer}>
+            <TopContainer
+              weatherData={DummyData}
+              date={date}
+              cityData={GoogleDummyData}
+            />
+            <BottomContainer weatherData={DummyData} />
+          </View>
+        )}
       </View>
     </View>
   );
@@ -41,9 +58,12 @@ function HomeScreen() {
 
 const styles = StyleSheet.create({
   dummyStyles: { flex: 1 },
-  componentsContainer: {
+  rootContainer: {
+    flex: 1,
     backgroundColor: '#C3CEB0',
-    flex: 5,
+  },
+  componentsContainer: {
+    flex: 1,
     justifyContent: 'space-between',
     paddingTop: 10,
   },
