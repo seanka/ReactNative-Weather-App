@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
   icons: {
     fontSize: 20,
   },
-  titleText: { fontSize: 12, fontWeight: '300' },
-  contentText: { fontSize: 15, fontWeight: '600' },
+  titleText: { fontFamily: 'Poppins-Light', fontSize: 11 },
+  contentText: { fontFamily: 'Poppins-SemiBold', fontSize: 14 },
 });
 
 export default WeatherDataComponent;

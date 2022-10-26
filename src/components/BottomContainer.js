@@ -9,7 +9,7 @@ function BottomContainer({ weatherData }) {
 
   return (
     <View style={styles.rootContainer}>
-      <Text>Weather now</Text>
+      <Text style={styles.titleText}>Weather now</Text>
       <View>
         <View style={styles.rowContainer}>
           <WeatherDataComponent
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   rootContainer: {
     marginHorizontal: 20,
   },
+  titleText: { fontFamily: 'Poppins-SemiBold', fontSize: 18 },
   rowContainer: {
     flexDirection: 'row',
   },

@@ -10,7 +10,9 @@ export function currentWeather(weatherData) {
   };
 
   useEffect(() => {
-    updateData();
+    if (weatherData) {
+      updateData();
+    }
   }, []);
 
   return [currentData, currentWeatherData];
