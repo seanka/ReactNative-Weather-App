@@ -17,3 +17,19 @@ export function currentWeather(weatherData) {
 
   return [currentData, currentWeatherData];
 }
+
+export function hourlyWeather(weatherData) {
+  const [hourlyData, setHourlyData] = useState([]);
+
+  const updateData = () => {
+    setHourlyData(weatherData.hourly);
+  };
+
+  useEffect(() => {
+    if (weatherData) {
+      updateData();
+    }
+  }, []);
+
+  return [hourlyData];
+}

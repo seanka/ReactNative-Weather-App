@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import ToggleButton from './bottom-container/ToggleButton';
+import WeatherHourly from './bottom-container/WeatherHourly';
 import WeatherNow from './bottom-container/WeatherNow';
 
 function BottomContainer({ weatherData }) {
@@ -23,7 +24,7 @@ function BottomContainer({ weatherData }) {
       case 'Now':
         return <WeatherNow weatherData={weatherData} />;
       case 'Hourly':
-        return null;
+        return <WeatherHourly weatherData={weatherData} />;
       case 'Daily':
         return null;
     }
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
     height: 250,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    paddingHorizontal: 20,
+    paddingHorizontal: 25,
     paddingVertical: 20,
     backgroundColor: 'white',
     elevation: 10,
