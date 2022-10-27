@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginVertical: 10,
     flex: 1,
+    marginHorizontal: 5,
   },
   iconContainer: {
     height: 40,

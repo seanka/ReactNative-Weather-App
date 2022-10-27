@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     height: 250,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    paddingHorizontal: 25,
+    paddingHorizontal: 20,
     paddingVertical: 20,
     backgroundColor: 'white',
     elevation: 10,
@@ -71,14 +71,17 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-SemiBold',
     fontSize: 18,
     paddingVertical: 5,
+    marginLeft: 5,
   },
   componentContainer: {
     flex: 4,
+    justifyContent: 'center',
   },
   buttonsContainer: {
     flex: 1,
     flexDirection: 'row',
     paddingTop: 10,
+    marginLeft: 5,
   },
 });
 

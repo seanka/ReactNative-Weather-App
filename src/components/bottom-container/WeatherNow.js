@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { currentWeather } from '../../libs/jsonParser';
-import WeatherDataComponent from './WeatherDataComponent';
+import { convertDate } from '../../libs/dateConverter';
+import WeatherDataComponent from './WeatherNowDataComponent';
 
 function WeatherNow({ weatherData }) {
   const [currentData] = currentWeather(weatherData);
@@ -21,11 +22,11 @@ function WeatherNow({ weatherData }) {
       </View>
       <View style={styles.rowContainer}>
         <WeatherDataComponent
-          componentData={currentData.sunrise}
+          componentData={convertDate(currentData.sunrise)}
           type="Sunrise"
         />
         <WeatherDataComponent
-          componentData={currentData.sunset}
+          componentData={convertDate(currentData.sunset)}
           type="Sunset"
         />
       </View>

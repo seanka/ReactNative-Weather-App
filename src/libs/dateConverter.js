@@ -3,7 +3,7 @@ export function convertDate(unix) {
   var hour = date.getHours();
   var ampm = '';
 
-  if (hour >= 12) {
+  if (hour > 12) {
     ampm = 'PM';
     hour = hour - 12;
   } else {
