@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { convertDate } from '../../libs/dateConverter';
+import { convertHour } from '../../libs/dateConverter';
 import { hourlyWeather } from '../../libs/jsonParser';
 
 function WeatherHourly({ weatherData }) {
@@ -11,7 +11,7 @@ function WeatherHourly({ weatherData }) {
     <View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {hourlyData.map(hourData => {
-          const [hour, ampm] = convertDate(hourData.dt);
+          const [hour, ampm] = convertHour(hourData.dt);
           return (
             <View key={hourData.dt} style={styles.rootContainer}>
               <Text style={styles.clockText}>

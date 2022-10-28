@@ -33,3 +33,19 @@ export function hourlyWeather(weatherData) {
 
   return [hourlyData];
 }
+
+export function dailyWeather(weatherData) {
+  const [dailyData, setDailyData] = useState([]);
+
+  const updateData = () => {
+    setDailyData(weatherData.daily);
+  };
+
+  useEffect(() => {
+    if (weatherData) {
+      updateData();
+    }
+  }, []);
+
+  return [dailyData];
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import ToggleButton from './bottom-container/ToggleButton';
+import WeatherDaily from './bottom-container/WeatherDaily';
 import WeatherHourly from './bottom-container/WeatherHourly';
 import WeatherNow from './bottom-container/WeatherNow';
 
@@ -26,7 +27,7 @@ function BottomContainer({ weatherData }) {
       case 'Hourly':
         return <WeatherHourly weatherData={weatherData} />;
       case 'Daily':
-        return null;
+        return <WeatherDaily weatherData={weatherData} />;
     }
   };
 

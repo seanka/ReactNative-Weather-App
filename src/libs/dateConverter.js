@@ -1,4 +1,4 @@
-export function convertDate(unix) {
+export function convertHour(unix) {
   const date = new Date(unix * 1000);
   var hour = date.getHours();
   var ampm = '';
@@ -14,4 +14,31 @@ export function convertDate(unix) {
   }
 
   return [hour, ampm];
+}
+
+export function convertDate(unix) {
+  const dates = new Date(unix * 1000);
+
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat'];
+
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+
+  const day = dates.getDay();
+  const date = dates.getDate();
+  const month = dates.getMonth();
+
+  return `${days[day]}, ${months[month]} ${date}`;
 }
