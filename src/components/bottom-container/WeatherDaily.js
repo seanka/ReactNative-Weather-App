@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { convertDate } from '../../libs/dateConverter';
@@ -22,7 +22,7 @@ function WeatherDaily({ weatherData }) {
                     uri: `http://openweathermap.org/img/wn/${dayData.weather[0].icon}@4x.png`,
                   }}
                 />
-                <View>
+                <View style={styles.flexShrinkContainer}>
                   <Text style={styles.tempText}>
                     {Math.floor(dayData.temp.day)}°{' '}
                   </Text>
@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 200,
     paddingHorizontal: 20,
+    justifyContent: 'center',
   },
   dateText: {
     fontFamily: 'Poppins-Regular',
     fontSize: 12,
-    marginBottom: 5,
   },
   descriptionContainer: {
     flexDirection: 'row',
@@ -59,13 +59,15 @@ const styles = StyleSheet.create({
   rowContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: 'black',
+    marginVertical: 3,
   },
   weatherIcon: {
     height: 55,
     width: 55,
     marginRight: 5,
+  },
+  flexShrinkContainer: {
+    flexShrink: 1,
   },
   tempText: {
     fontFamily: 'Poppins-SemiBold',
@@ -74,6 +76,7 @@ const styles = StyleSheet.create({
   descText: {
     fontFamily: 'Poppins-Regular',
     fontSize: 12,
+    flexShrink: 1,
   },
 });
 

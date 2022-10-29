@@ -3,17 +3,37 @@ import { StyleSheet, Text, View } from 'react-native';
 import MattComIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FeatherIcons from 'react-native-vector-icons/Feather';
 
-function WeatherDataComponent({ type, componentData }) {
+function WeatherDataComponent({ type, componentData, style }) {
   const iconTypeSwitch = type => {
     switch (type) {
       case 'Feels like':
-        return <MattComIcons name="temperature-celsius" style={styles.icons} />;
+        return (
+          <MattComIcons
+            name="temperature-celsius"
+            style={style ? style.iconStyle : styles.icons}
+          />
+        );
       case 'Humidity':
-        return <FeatherIcons name="droplet" style={styles.icons} />;
+        return (
+          <FeatherIcons
+            name="droplet"
+            style={style ? style.iconStyle : styles.icons}
+          />
+        );
       case 'Sunrise':
-        return <MattComIcons name="weather-sunset-down" style={styles.icons} />;
+        return (
+          <MattComIcons
+            name="weather-sunset-down"
+            style={style ? style.iconStyle : styles.icons}
+          />
+        );
       case 'Sunset':
-        return <MattComIcons name="weather-sunset-up" style={styles.icons} />;
+        return (
+          <MattComIcons
+            name="weather-sunset-up"
+            style={style ? style.iconStyle : styles.icons}
+          />
+        );
     }
   };
 
@@ -21,8 +41,10 @@ function WeatherDataComponent({ type, componentData }) {
     <View style={styles.rowContainer}>
       <View style={styles.iconContainer}>{iconTypeSwitch(type)}</View>
       <View>
-        <Text style={styles.titleText}>{type}</Text>
-        <Text style={styles.contentText}>{componentData} </Text>
+        <Text style={style ? style.titleStyle : styles.titleText}>{type}</Text>
+        <Text style={style ? style.componentStyle : styles.contentText}>
+          {componentData}{' '}
+        </Text>
       </View>
     </View>
   );

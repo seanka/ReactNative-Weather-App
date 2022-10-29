@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { currentWeather } from '../../libs/jsonParser';
 import { convertHour } from '../../libs/dateConverter';
-import WeatherDataComponent from './WeatherNowDataComponent';
+import WeatherDataComponent from './WeatherCardComponent';
 
 function WeatherNow({ weatherData }) {
   const [currentData] = currentWeather(weatherData);
